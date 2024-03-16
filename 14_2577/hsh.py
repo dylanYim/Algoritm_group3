@@ -9,5 +9,8 @@ while abc != 0:
     list1[abc%10] += 1
     abc = abc // 10
 
+
+    
+
 for i in list1:
     print(i)

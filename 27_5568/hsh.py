@@ -1,31 +1,36 @@
+def perm(lst,n):
+	ret = []
+	if n > len(lst): return ret
+
+	if n==1:
+		for i in lst:
+			ret.append([i])
+	elif n>1:
+		for i in range(len(lst)):
+			temp = [i for i in lst]
+			temp.remove(lst[i])
+			for p in perm(temp,n-1):
+				ret.append([lst[i]]+p)
+
+	return ret
+
 import sys
 trial = int(sys.stdin.readline())
-choice = int(sys.stdin.readline())
-hand = []
-result = []
+n = int(sys.stdin.readline())
+list1 = []
 while trial > 0:
-    card = int(sys.stdin.readline())
-    hand.append(card)
+	list1.append(int(sys.stdin.readline()))
+	trial -= 1
 
-    trial -= 1
+created_numbers = []
+word = str("")
+for i in perm(list1, n):
+	for j in range(len(i)):
+		word += str(i[j])
+	word = int(word)
+	if word not in created_numbers:
+		created_numbers.append(word)
+	word = str("")
 
-print()
-
-while True:
-
-    if c == 6:
-        if b == 5:
-            if a == 4:
-                break
-            else:
-                a+=1
-                b=a+1
-                c=b+1
-        else:
-            b+=1
-            c= b+1
-    else:
-        c += 1
-
-
-
+print(len(created_numbers))
+		

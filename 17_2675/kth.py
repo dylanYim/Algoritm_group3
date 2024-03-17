@@ -1,7 +1,8 @@
-r, s = input().split(' ')
-r = int(r)
-p = list(s)
-
-for i in range(len(p)):
-    for j in range(r):
-        print(p[i], end="")
+t = int(input())
+p = []
+for _ in range(t):
+    r, s = input().split(' ')
+    for i in s:
+        for j in range(int(r)):
+            print(i, end="")
+    print('')

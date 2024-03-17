@@ -1,5 +1,5 @@
 while True:
-    score = int(input("점수 입력: "))
+    score = int(input())
     if (0 <= score <= 100):
         break
 

@@ -1,4 +1,4 @@
 num = int(input())
 
-for i in range(1, 10, 1):
-    print(num, " * ", i, " = ", num*i)
+for i in range(1, 10):
+    print(str(num) + " * " + str(i) + " = " + str(num*i))

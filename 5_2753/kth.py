@@ -1,5 +1,5 @@
 while True:
-    year = int(input("연도 입력: "))
+    year = int(input())
     if (1 <= year <= 4000):
         break
 

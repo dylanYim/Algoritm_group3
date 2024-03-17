@@ -1,10 +1,6 @@
 a, b, v = map(int,input().split())
-day = 1
-while True:
-    v -= a
-    if v <= 0:
-        break
-    v += b
-    day +=1
-print(day)
+day = (v-b) // (a-b)
+if (v-b) % (a-b) != 0:
+    day += 1
 
+print(day)

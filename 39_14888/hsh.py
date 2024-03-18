@@ -12,10 +12,6 @@ for i in range(len(operator)):
     operator[i] = int(operator[i])
 
 
-Kor = ["합", "차", "곱", "몫"]
-result = []
-temp_sum = 0
-
 
 def perm(char, Kor, operator):
 
@@ -34,13 +30,13 @@ def perm(char, Kor, operator):
                 temp_sum *=  numbers[i+1]
             elif char[i] == "몫":
                 if temp_sum < 0:
-                    temp_sum =  (-1* (temp_sum)) // numbers[i+1]
+                    temp_sum =  -1*((-1* (temp_sum)) // numbers[i+1])
                 else:
                     temp_sum //=  numbers[i+1]
                     
-            if i == len(numbers)-2:
-                result.append(temp_sum)
-                temp_sum = 0
+            
+        result.append(temp_sum)
+        temp_sum = 0
                 
 
     for j in range(len(operator)):
@@ -51,7 +47,11 @@ def perm(char, Kor, operator):
             char = char[:-1]
             operator[j] += 1
 
+Kor = ["합", "차", "곱", "몫"]
+result = []
+temp_sum = 0
 
 perm("",Kor,operator)
 print(max(result))
 print(min(result))
+

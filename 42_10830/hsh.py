@@ -16,7 +16,7 @@ def pwer_down(mat, power):
     if (power != 0) and ((power & (power - 1)) == 0):
         return pwer_down(matrix_multiply(mat,mat), max_po_2(power)//2)
     else:
-        return matrix_multiply(pwer_down(matrix_multiply(mat,mat), max_po_2(power)//2),pwer_down(mat, power - (max_po_2(power))))
+        return matrix_multiply(pwer_down(matrix_multiply(mat,mat), max_po_2(power)//2), pwer_down(mat, power - (max_po_2(power))))
 
 def max_po_2(num):
     power = 0
@@ -46,7 +46,7 @@ result = pwer_down(matrix1, power)
 for i in range(len(matrix1)):
     for j in range(len(matrix1)):
         if j == len(matrix1)-1:
-            print(result[i][j])
+            print(result[i][j]%1000)
         else:
-            print(result[i][j], end=" ")
+            print(result[i][j]%1000, end=" ")
     

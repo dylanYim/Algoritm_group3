@@ -5,10 +5,11 @@
 # trial = int(sys.stdin.readline())
 # a,b = map(int,sys.stdin.readline().split())
 
-# list1_str=input()
+# list1_str = sys.stdin.readline()
 # list1 = list1_str.split()
 # for i in range(len(list1)):
 #     list1[i] = int(list1[i])
+
 
 # # Sample list
 # arr = [1, 2, 3, 4, 5]

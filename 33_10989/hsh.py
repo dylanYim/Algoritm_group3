@@ -1,6 +1,6 @@
 import sys
 trial = int(sys.stdin.readline())
-list1=[0] * 10001
+list1 = [0] * 10001
 
 for i in range(trial):
     x = int(sys.stdin.readline())

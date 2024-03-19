@@ -1,19 +1,12 @@
 import sys
 N = int(sys.stdin.readline())
 
-list1_str = input()
-list1 = list1_str.split()
-for i in range(len(list1)):
-    list1[i] = int(list1[i])
+list1 = list(map(int, sys.stdin.readline().split()))
+list1.sort()
 
 M = int(sys.stdin.readline())
 
-list2_str = input()
-list2 = list2_str.split()
-for i in range(len(list2)):
-    list2[i] = int(list2[i])
-
-list1.sort()
+list2 = list(map(int, sys.stdin.readline().split()))
 
 def find(list1, i, left, right):
     mid = (left + right)//2

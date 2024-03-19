@@ -5,7 +5,7 @@ lst = []
 
 for i in range(trial):
     x = str(sys.stdin.readline()).strip()
-    if (x) not in lst:
+    if x not in lst:
         lst.append(x)
 
 lst.sort()

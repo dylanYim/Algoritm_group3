@@ -5,8 +5,6 @@ while trial > 0:
 	list1.append(int(sys.stdin.readline()))
 	trial -= 1
 
-
-
 def comb(lst,n):
 	ret = []
 	if n > len(lst): return ret

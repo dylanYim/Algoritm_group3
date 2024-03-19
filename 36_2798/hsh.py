@@ -1,11 +1,6 @@
 import sys
-N,M = map(int,sys.stdin.readline().split())
-list1_str = input()
-list1 = list1_str.split()
-
-for i in range(len(list1)):
-	list1[i] = int(list1[i])
-
+N, M = map(int,sys.stdin.readline().split())
+list1 = list(map(int, sys.stdin.readline().split()))
 
 def comb(lst,n):
 	ret = []
@@ -21,8 +16,8 @@ def comb(lst,n):
 
 	return ret
 
-max = 0
 
+max = 0
 for i in comb(list1, 3):
 	if sum(i) <= M and sum(i) > max:
 		max = sum(i)

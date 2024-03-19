@@ -1,9 +1,7 @@
 import sys
-import itertools
 trial = N = int(sys.stdin.readline())
 
 cities = []
-
 
 while trial > 0:
     list1_str = input()
@@ -16,16 +14,15 @@ while trial > 0:
 
     trial -= 1
 
-
 def dist(n, m):
     return cities[n][m] 
+
 
 def solve(arrived, arr):
     global start
     ret = []
     if len(arr) == 1:
         return dist(arrived,arr[0]) + dist(arr[0], start)
-
 
     for i in range(len(arr)):
         new_arrived = arr[i]
@@ -43,4 +40,5 @@ for start in arr1:
     ret = []
     new_arr = arr1[:start] + arr1[start+1:]
     ret.append(solve(start,new_arr))
+
 print(min(ret))

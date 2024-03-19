@@ -1,6 +1,6 @@
 import sys
 
-N,C = map(int,sys.stdin.readline().split())
+N, C = map(int,sys.stdin.readline().split())
 M = N
 lst1 = []
 
@@ -21,13 +21,12 @@ while start <= end:
     current = lst1[0]
     for i in range(1, len(lst1)):
         if lst1[i] >= current + distance:
-            cnt +=1
+            cnt += 1
             current = lst1[i]
     if cnt >= C:
         result = distance
         start = distance + 1
     else:
         end = distance - 1
-    
 
 print(result)

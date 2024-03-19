@@ -2,12 +2,13 @@ import sys
 N, K = map(int,sys.stdin.readline().split())
 M = N
 list1 = []
+max = 0
 while M > 0:
     list1.append(int(sys.stdin.readline()))
     M -= 1
 
 start = min(list1)
-end = 1000000001
+end =  1000000001
 
 while start <= end:
     cut_level = (start + end) //2

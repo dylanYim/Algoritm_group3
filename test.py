@@ -5,7 +5,7 @@ while trial > 0:
 
     trial -= 1
 
-# 1 10  -> a=1, b=10
+# 1 10  -> a = 1, b = 10
 a, b = map(int,sys.stdin.readline().split())
 
 # str str -> ["str", "str"]

@@ -10,5 +10,4 @@ while trial > 0:
         lst.append(x)
 
     trial -= 1
-    
 print(sum(lst))

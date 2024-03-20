@@ -10,10 +10,10 @@ for _ in range(n):
 ch.sort()
 
 s = ch[0]
-e = ch[len(ch)-1]
+e = ch[len(ch)-1] + k
 result = 0
 
-while abs(s-e) > 1:
+while s <= e:
     h = (s + e) // 2
     sum = 0
     for i in range(len(ch)):
@@ -22,8 +22,8 @@ while abs(s-e) > 1:
     if k >= sum:
         if (result < h):
             result = h
-        s = h
+        s = h + 1
     else:
-        e = h
+        e = h - 1
 
 print(result)

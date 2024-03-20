@@ -7,14 +7,12 @@ def cut_tree(a, lst):
         sum = 0
         for i in range(len(lst)):
             if lst[i] > mid:
-                sum += lst[i]
-        if sum > a:
-            first = mid
-        elif sum < a:
-            last = mid
+                sum += lst[i] - mid
+        if sum >= a:
+            first = mid + 1
         else:
-            break
-    return mid
+            last = mid - 1
+    return last
             
 
 n, m = map(int, sys.stdin.readline().split())

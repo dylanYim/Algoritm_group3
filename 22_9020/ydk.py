@@ -19,7 +19,7 @@ for l in lst:
     plst = get_prime_list(l)
     for p in plst:
         j = l-p
-        if j in plst and j>=p:
+        if j in plst and j >= p:
             pans.append(str(p) + ' ' + str(j))
     ans.append(pans[-1])
 

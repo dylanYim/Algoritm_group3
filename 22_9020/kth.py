@@ -9,6 +9,13 @@ def prime_list(a):
       while i*j <= a:
         chk[i*j] = False
         j += 1
+  for i in range(2, a//2 + 1):
+    if chk[i] and chk[a-i]:
+      f = chk[i]
+      s = chk[a-i]
+
+  print(f'{f} {s}')
+
   lst = [x for x in range(a+1) if chk[x]]
   return lst
 
